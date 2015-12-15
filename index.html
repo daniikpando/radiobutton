@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evaluacion de Javascript</title>
+	<style>
+	html,body{
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.container{
+		width: 960px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	h1{
+		padding: 0;
+		margin: 0;
+		font-weight: 400;
+	}
+	fieldset{
+		text-align: left;
+	} 
+	.clear{
+		clear:both;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Evalucion Javascript</h1>
+		<div class="sub-container">
+			<p>Te faltan <span id="punts"></span></p>
+			<fieldset>
+				<legend>Tabla de resultado</legend>
+					<h3 id="enunciado"></h3>
+					
+					<input type="radio" id="radio1" name="respuesta">
+					<label for="radio1" id="posible"></label>
+					<div class="clear"></div>
+					
+					<input type="radio" id="radio2" name="respuesta">
+					<label for="radio2" id="posible1"></label>
+					<div class="clear"></div>
+					
+					<input type="radio" id="radio3" name="respuesta">
+					<label for="radio3" id="posible2"></label>
+					<div class="clear"></div>
+					<button id="verificacion">Verificar resultado</button>
+			</fieldset>
+			<h1 id="resol"></h1>
+			<h1 id="true_or_false"></h1>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script>
+		window.onload = function(){
+			var enunciado = document.querySelector("#enunciado");
+			var respuesta1 = document.getElementById('radio1');
+			var respuesta2 = document.getElementById('radio2');
+			var respuesta3 = document.getElementById('radio3');
+			var boton = document.getElementById('verificacion');
+			app = new App(enunciado,respuesta1,respuesta2,respuesta3,boton);
+		}
+	</script>
+</body>
+</html>
